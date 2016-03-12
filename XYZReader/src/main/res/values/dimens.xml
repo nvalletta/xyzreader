@@ -19,5 +19,7 @@
     <dimen name="card_max_width">150dp</dimen>
 
     <dimen name="dimen_zero">0dp</dimen>
+    <dimen name="ic_toolbar_size">56dp</dimen>
+    <dimen name="detail_image_height">200dp</dimen>
 
 </resources>

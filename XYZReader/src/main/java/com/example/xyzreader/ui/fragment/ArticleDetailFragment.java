@@ -1,5 +1,6 @@
 package com.example.xyzreader.ui.fragment;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.LoaderManager;
 import android.content.Intent;
@@ -8,6 +9,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -37,17 +39,13 @@ public class ArticleDetailFragment extends Fragment implements
     private static final String TAG = "ArticleDetailFragment";
 
     public static final String ARG_ITEM_ID = "item_id";
-    private static final float PARALLAX_FACTOR = 1.25f;
 
     private Cursor mCursor;
     private long mItemId;
     private View mRootView;
     private int mMutedColor = 0xFF333333;
 
-    private View mPhotoContainerView;
     private ImageView mPhotoView;
-    private boolean mIsCard = false;
-    private int mStatusBarFullOpacityBottom;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -72,9 +70,6 @@ public class ArticleDetailFragment extends Fragment implements
             mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
 
-        mIsCard = getResources().getBoolean(R.bool.detail_is_card);
-        mStatusBarFullOpacityBottom = getResources().getDimensionPixelSize(
-                R.dimen.detail_card_top_margin);
         setHasOptionsMenu(true);
     }
 
@@ -106,18 +101,19 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
+        View mUpButton = mRootView.findViewById(R.id.action_up);
+        mUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity parentActivity = (AppCompatActivity)getActivity();
+                if (null != parentActivity) {
+                    parentActivity.onSupportNavigateUp();
+                }
+            }
+        });
+
         bindViews();
         return mRootView;
-    }
-
-    static float constrain(float val, float min, float max) {
-        if (val < min) {
-            return min;
-        } else if (val > max) {
-            return max;
-        } else {
-            return val;
-        }
     }
 
     private void bindViews() {

@@ -10,9 +10,12 @@
     <dimen name="detail_inner_horiz_margin">16dp</dimen>
     <dimen name="detail_card_top_margin">@dimen/detail_photo_height</dimen>
     <dimen name="detail_photo_height">300dp</dimen>
+    <dimen name="detail_toolbar_min_height">100dp</dimen>
     <dimen name="card_margin_small">4dp</dimen>
     <dimen name="card_margin_medium">8dp</dimen>
     <dimen name="card_image_max_height">90dp</dimen>
     <dimen name="card_max_width">150dp</dimen>
+    <dimen name="ic_toolbar_size">56dp</dimen>
+    <dimen name="detail_image_height">200dp</dimen>
 
 </resources>
