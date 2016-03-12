@@ -25,6 +25,6 @@
     <color name="primary_material_light">#8bc34a</color>
     <color name="primary_dark_material_light">#33691e</color>
     <color name="accent_material_light">#ffc107</color>
-    <color name="foreground_material_light">#888888</color>
+    <color name="foreground_material_light">#ffffff</color>
     <color name="black">#ffffff</color>
 </resources>

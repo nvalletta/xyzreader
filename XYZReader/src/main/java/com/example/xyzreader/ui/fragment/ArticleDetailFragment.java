@@ -110,10 +110,6 @@ public class ArticleDetailFragment extends Fragment implements
         return mRootView;
     }
 
-    static float progress(float v, float min, float max) {
-        return constrain((v - min) / (max - min), 0, 1);
-    }
-
     static float constrain(float val, float min, float max) {
         if (val < min) {
             return min;
@@ -129,7 +125,7 @@ public class ArticleDetailFragment extends Fragment implements
             return;
         }
 
-        Toolbar toolbar = (Toolbar) mRootView.findViewById(R.id.meta_bar);
+        final Toolbar toolbar = (Toolbar) mRootView.findViewById(R.id.meta_bar);
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
 
         if (mCursor != null) {
@@ -155,8 +151,7 @@ public class ArticleDetailFragment extends Fragment implements
                                 Palette p = Palette.generate(bitmap, 12);
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
-                                mRootView.findViewById(R.id.meta_bar)
-                                        .setBackgroundColor(mMutedColor);
+                                toolbar.setBackgroundColor(mMutedColor);
                             }
                         }
 
