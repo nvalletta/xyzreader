@@ -9,5 +9,6 @@
 
     <string name="up">Up</string>
     <string name="content_header_photo">Article header photo</string>
+    <string name="card_image">Card image</string>
 
 </resources>
