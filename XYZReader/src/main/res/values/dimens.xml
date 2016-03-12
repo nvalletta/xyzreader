@@ -18,4 +18,6 @@
     <dimen name="card_image_max_height">90dp</dimen>
     <dimen name="card_max_width">150dp</dimen>
 
+    <dimen name="dimen_zero">0dp</dimen>
+
 </resources>

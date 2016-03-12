@@ -23,24 +23,15 @@
 
         <TextView
             android:id="@+id/article_title"
-            style="@style/TextAppearance.AppCompat.Subhead"
+            style="@style/CardTitleStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/card_margin_medium"
-            android:paddingBottom="@dimen/card_margin_small"
-            android:ellipsize="end"
-            android:maxLines="4" />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/article_subtitle"
-            style="@style/TextAppearance.AppCompat.Body1"
+            style="@style/CardSubTitleStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/card_margin_medium"
-            android:paddingTop="@dimen/card_margin_small"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:ellipsize="end" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

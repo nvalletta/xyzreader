@@ -22,4 +22,21 @@
         <item name="android:textColorPrimaryInverse">@android:color/white</item>
     </style>
 
+    <style name="CardTitleStyle" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+        <item name="android:padding">@dimen/card_margin_medium</item>
+        <item name="android:paddingBottom">@dimen/dimen_zero</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">4</item>
+    </style>
+
+    <style name="CardSubTitleStyle" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+        <item name="android:padding">@dimen/card_margin_medium</item>
+        <item name="android:paddingTop">@dimen/dimen_zero</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
 </resources>
