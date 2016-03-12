@@ -22,6 +22,15 @@
         <item name="android:textColorPrimaryInverse">@android:color/white</item>
     </style>
 
+
+
+    <!-- Main Activity -->
+
+    <style name="MainActivityToolbarStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:layout_marginLeft">@dimen/dimen_zero</item>
+        <item name="android:layout_marginRight">@dimen/dimen_zero</item>
+    </style>
+
     <style name="CardTitleStyle" parent="@style/TextAppearance.AppCompat.Subhead">
         <item name="android:textColor">@color/secondary_text_default_material_light</item>
         <item name="android:padding">@dimen/card_margin_medium</item>
@@ -37,6 +46,22 @@
         <item name="android:maxLines">1</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
+    </style>
+
+
+
+    <!-- Details Activity -->
+
+    <style name="UpArrowBackButtonStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </style>
+
+    <style name="DetailFABStyle" parent="@style/Widget.Design.FloatingActionButton">
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:layout_marginBottom">@dimen/fab_margin</item>
+        <item name="android:layout_marginEnd">@dimen/fab_margin</item>
+        <item name="android:elevation">@dimen/fab_elevation</item>
+        <item name="android:stateListAnimator">@anim/fab_state_list_anim</item>
     </style>
 
 </resources>
